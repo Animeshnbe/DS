@@ -1,0 +1,9 @@
+LOAD Marks
+SM <- CROSS Student Marks
+SMrel <- SELECT Student_Stud_Id == Marks_Stud_Id FROM SM
+Maths <- SELECT Maths_marks >= 70 FROM SMrel
+Physics <- SELECT Physics_marks > 60 FROM Maths
+Sg <- SELECT Stud_age >= 16 FROM Physics
+Sl <- SELECT Stud_age <= 18 FROM Sg
+Rd <- PROJECT Student_Stud_Id,Maths_marks,Physics_marks,Stud_age FROM Sl
+PRINT Rd

@@ -1,0 +1,6 @@
+ReSex <- SELECT Stud_sex == 1 FROM SArel
+ReAdv <- SELECT Adv_Id == 1 FROM ReSex
+ReM <- CROSS ReAdv Marks
+ReMrel <- SELECT Student_Stud_Id == Marks_Stud_Id FROM ReM
+Re <- SELECT Maths_marks > 70 FROM ReMrel
+PRINT Re

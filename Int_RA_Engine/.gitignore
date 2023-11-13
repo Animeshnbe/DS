@@ -1,0 +1,10 @@
+*.o
+log
+server
+.vscode/
+data/temp
+data/*.csv
+data/debug/
+*.exe
+*.exe.stackdump
+*.py
